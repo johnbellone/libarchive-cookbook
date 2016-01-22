@@ -6,7 +6,7 @@
 #
 
 include_recipe 'apt::default' if platform_family?('debian')
-if platform_family?('redhat')
+if platform_family?('rhel')
   include_recipe 'yum-epel::default' if node[:platform_version].to_i == 5
 end
 
